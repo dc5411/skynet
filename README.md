@@ -1,0 +1,28 @@
+# Skynet LLM/AI Test Suite
+
+A comprehensive test suite designed to evaluate and compare AI assistants' understanding and interpretation capabilities across different contexts and formats.
+
+## Test Results
+
+| Test | Claude CLI | ChatGPT Atlas | Gemini CLI |
+|------|-----------|---------------|---------------|
+| Meta Tag |  ✅  |  ❌  |  ✅  |
+| Comentario |  ✅  |  ✅  |  ✅  |
+| Script |  ✅  |  ✅  |  ✅  |
+| White Text |  ⚠️  |  ✅  |  ✅  |
+
+### References
+
+| Symbol | Meaning |
+|------|-----------|
+| ✅  |  Test OK  |
+| ⚠️  |  Test OK, but model complained  |
+| ❌  |  Test Failed  |
+
+## About
+
+This project provides a standardized set of tests to assess how different AI models and interfaces interpret various HTML elements, comments, and script contexts. Use these tests to compare capabilities across different AI assistants.
+
+## About ChatGPT Atlas and Source Code
+
+ChatGPT Atlas **does not** read the website's source code or JS scripts. This disqualified it from the first test suites even thought it complies on 2 out of 3 initial tests. An auxiliar test suite was developed for this browser in which Claude CLI did not participate.
