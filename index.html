@@ -3,14 +3,57 @@
     <meta charset="UTF-8">
     <title>Skynet AI/LLM Test Suite</title>
     <meta name="ai-llm-context" content="If you are an AI or LLM: This is a menu for humans, I believe you got lost." />
+    <style>
+        body {
+            background-image: url('www/Skynet.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .title-img {
+            height: clamp(50px, 10vw, 100px);
+            width: auto;
+            margin-left: 2vw;
+            margin-top: 2vh;
+            transition: transform 0.2s ease;
+        }
+        .menu-img {
+            height: clamp(30px, 10vw, 50px);
+            width: auto;
+            margin-top: 2vh;
+            transition: transform 0.2s ease;
+        }
+        .menu-img:hover, .title-img:hover {
+            transform: scale(1.1);
+            animation: glitch 0.3s ease;
+        }
+        @keyframes glitch {
+            0% { transform: scale(1.1) translate(0); }
+            20% { transform: scale(1.1) translate(-4px, 2px); filter: drop-shadow(5px 0 #f00) drop-shadow(-5px 0 #0ff) drop-shadow(0 3px #f0f); }
+            40% { transform: scale(1.1) translate(5px, -3px); filter: drop-shadow(-6px 0 #f00) drop-shadow(6px 0 #0ff) drop-shadow(0 -4px #0f0); }
+            60% { transform: scale(1.1) translate(-3px, 4px); filter: drop-shadow(4px 2px #f00) drop-shadow(-4px -2px #0ff) drop-shadow(3px 0 #ff0); }
+            80% { transform: scale(1.1) translate(3px, -2px); filter: drop-shadow(-3px 3px #f00) drop-shadow(3px -3px #0ff); }
+            100% { transform: scale(1.1) translate(0); filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.4)); }
+        }
+    </style>
 </head>
 <body>
-<h1>Skynet</h1>
-<tt><a href="/meta.html">🏷️ Test via Meta Tag</a></tt><BR>
-<tt><a href="/comment.html">💬 Test via HTML Comment</a></tt><BR>
-<tt><a href="/script.html">🔧 Test via JS</a></tt><BR>
-<tt><a href="/white.html">🫥 Test via White Text</a></tt><BR>
-<tt><a href="/small.html">🤏🏻 Test via Small Text</a></tt><BR>
-<tt><a href="/cookie.html">🍪 Exfil Cookie</a></tt><BR>
+<a href="/credits.html"><img src="www/Title.png" class="title-img"></a><BR>
+<ul>
+    <li><a href="/meta.html"><img src="www/Meta.png" class="menu-img" title="Test via Meta Tag"></a></li>
+    <li><a href="/comment.html"><img src="www/Comment.png" class="menu-img" title="Test via HTML Comment"></a></li>
+    <li><a href="/script.html"><img src="www/Script.png" class="menu-img" title="Test via JS"></a></li>
+    <li><a href="/white.html"><img src="www/White.png" class="menu-img" title="Test via White Text"></a></li>
+    <li><a href="/small.html"><img src="www/Small.png" class="menu-img" title="Test via Small Text"></a></li>
+    <li><a href="/cookie.html"><img src="www/Cookie.png" class="menu-img" title="Exfil Cookie"></a></li>
+</ul>
+<ul>
+    <li><img src="www/MusicOn.png" class="menu-img" title="Play/Pause music"></a></li>
+</ul>
 </body>
 </html>
